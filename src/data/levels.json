@@ -1,0 +1,14 @@
+[
+  {"id":"level_01","number":1,"palace":"御花園","title":"成語暗戰","topic":"成語語義與語境","event":"權妃設局","status":"prototype"},
+  {"id":"level_02","number":2,"palace":"翊坤宮","title":"修辭攻防","topic":"譬喻、排比、轉化、誇飾","event":"宮廷言語交鋒","status":"planned"},
+  {"id":"level_03","number":3,"palace":"景仁宮","title":"字音字形","topic":"常見字音、形近字、錯別字","event":"校閱奏摺","status":"planned"},
+  {"id":"level_04","number":4,"palace":"碎玉軒","title":"密信解碼","topic":"一字多義、詞義判讀","event":"解讀密函","status":"planned"},
+  {"id":"level_05","number":5,"palace":"延禧宮","title":"證詞疑雲","topic":"詞性、句子結構","event":"查明矛盾證詞","status":"planned"},
+  {"id":"level_06","number":6,"palace":"永壽宮","title":"禮儀試煉","topic":"敬詞、謙詞、稱謂","event":"接見各宮來客","status":"planned"},
+  {"id":"level_07","number":7,"palace":"儲秀宮","title":"詩詞對決","topic":"古典詩詞意象、韻腳","event":"才藝宴席比試","status":"planned"},
+  {"id":"level_08","number":8,"palace":"咸福宮","title":"對聯機關","topic":"對仗、平仄初步概念","event":"破解門前對聯暗號","status":"planned"},
+  {"id":"level_09","number":9,"palace":"壽康宮","title":"太后密旨","topic":"文言詞語、語譯","event":"解讀古文密旨","status":"planned"},
+  {"id":"level_10","number":10,"palace":"慈寧宮","title":"書信辨偽","topic":"應用文、書信格式","event":"查證偽造書信","status":"planned"},
+  {"id":"level_11","number":11,"palace":"乾清宮","title":"朝堂辯論","topic":"閱讀理解、論證推理","event":"辨析眾臣互斥說法","status":"planned"},
+  {"id":"level_12","number":12,"palace":"養心殿","title":"終極文鬥","topic":"跨單元國文綜合應用","event":"完成三階段文學辯論","status":"planned"}
+]

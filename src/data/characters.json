@@ -1,0 +1,4 @@
+[
+  { "id": "NARRATOR", "name": "旁白" },
+  { "id": "CONSORT", "name": "權妃", "expressions": { "skeptical": "質疑", "impressed": "讚許", "thoughtful": "沉思", "smile": "微笑" } }
+]

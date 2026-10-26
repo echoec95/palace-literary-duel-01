@@ -1,0 +1,35 @@
+{
+  "scenes": [
+    { "scene_id": "level_01_intro", "start_node": "intro_n1", "on_complete": "investigate" },
+    { "scene_id": "level_01_argument", "start_node": "argument_n1", "on_complete": "result" }
+  ],
+  "nodes": [
+    {
+      "node_id": "intro_n1", "scene_id": "level_01_intro", "speaker_id": "NARRATOR", "portrait_expression": "neutral",
+      "dialogue_text": "御花園的詩文雅集即將開始。權妃指稱宮女小棠弄亂了成語竹籤，言談間卻又說她做事鍥而不捨。這段話是否前後一致？",
+      "choices": [], "next_node": "intro_n2"
+    },
+    {
+      "node_id": "intro_n2", "scene_id": "level_01_intro", "speaker_id": "CONSORT", "portrait_expression": "skeptical",
+      "dialogue_text": "這句話聽來漂亮，未必用得恰當。先看完三件物證，再告訴本宮：什麼樣的行動，才稱得上鍥而不捨？",
+      "choices": [], "next_node": null
+    },
+    {
+      "node_id": "argument_n1", "scene_id": "level_01_argument", "speaker_id": "NARRATOR", "portrait_expression": "neutral",
+      "dialogue_text": "你答對 {coreScore}/5 題。選擇一種說法引用線索；三種說法都會保留正確的語文判斷。",
+      "choices": [
+        { "choice_id": "evidence_first", "text": "先引證據：指出竹籤和密信記的是兩件不同的工作。", "condition": { "type": "inventory_has", "item_id": "slip_record_seen" }, "effects": [{ "type": "quest_flag_set", "flag_id": "argument_resolved", "value": true }, { "type": "knowledge_score_delta", "topic_id": "idiom_context", "delta": 1 }], "next_node": "reply_evidence" },
+        { "choice_id": "definition_first", "text": "先釋詞義：說明鍥而不捨描述持續努力，再對照每件事的經過。", "effects": [{ "type": "quest_flag_set", "flag_id": "argument_resolved", "value": true }, { "type": "knowledge_score_delta", "topic_id": "idiom_context", "delta": 1 }], "next_node": "reply_definition" },
+        { "choice_id": "gentle_reply", "text": "委婉回應：提醒權妃，分開看兩件事，才不會把一句話說得太滿。", "effects": [{ "type": "quest_flag_set", "flag_id": "argument_resolved", "value": true }, { "type": "knowledge_score_delta", "topic_id": "idiom_context", "delta": 1 }], "next_node": "reply_gentle" }
+      ], "next_node": null
+    },
+    { "node_id": "reply_evidence", "scene_id": "level_01_argument", "speaker_id": "CONSORT", "portrait_expression": "impressed", "dialogue_text": "權妃聽完兩份記錄，收起摺扇：「你分得清證據能支持什麼，倒有幾分本事。」", "choices": [], "next_node": null },
+    { "node_id": "reply_definition", "scene_id": "level_01_argument", "speaker_id": "CONSORT", "portrait_expression": "thoughtful", "dialogue_text": "權妃點了點竹籤：「先把詞義說清楚，再看事情是否相合，這回答倒算周全。」", "choices": [], "next_node": null },
+    { "node_id": "reply_gentle", "scene_id": "level_01_argument", "speaker_id": "CONSORT", "portrait_expression": "smile", "dialogue_text": "權妃微微一笑：「話說得婉轉，理倒沒有含糊。這回算你過關。」", "choices": [], "next_node": null }
+  ],
+  "clues": [
+    { "id": "fan_note_seen", "title": "摺扇題記", "symbol": "扇", "detail": "扇面寫著「鍥而不捨」，旁邊另有一句未完成的題記。單看成語，還不能判斷它是否符合某件事的經過。" },
+    { "id": "slip_record_seen", "title": "成語竹籤", "symbol": "籤", "detail": "竹籤背面記錄：小棠反覆修整插花，幾次不滿意仍繼續嘗試，最後完成作品。" },
+    { "id": "letter_record_seen", "title": "密信記錄", "symbol": "信", "detail": "信中記載：小棠抄寫名冊時曾做到一半便停下，隔日才回來完成。這件事和插花記錄是不同工作。" }
+  ]
+}
